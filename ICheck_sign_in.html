@@ -1,66 +1,46 @@
-<html>
-<head>
-<title>ICheck</title>
-<style> 
-
-
-</style>
-</head>
-<body>
-
-
-
-<center>
-
-
-<h1>ICheck</h1>
-
+<center> <h1>ICheck</h1>
 <Img SRC ="C:\Users\Paulina\Downloads\ICheck.jpeg"/>
+<p> <h3>LET'S SIGN IN</h3></p>
 
-<p>
-<h3>LET'S SIGN IN</h3>	
-</p>
+<form class="box"
+action="loginvalidation.php"
+method ="get">
 
-<br>
-Username:
-</br>
-<INPUT TYPE="text" NAME="username">
-</br>
+<br> Username: </br>
+<INPUT TYPE="text" NAME="username"
+<?php 
+			if (isset($_GET['alert'])){
+				echo 'placeholder = "User not match" ';	
+			} else {
+				echo 'placeholder = "Username" ';
+			}
+?>          > </br>
 
-<br>
-Password:
-</br>
-<INPUT TYPE="text" NAME="password">
-</br>
-
-
-<br>
-<INPUT TYPE="submit" VALUE="sign in">
-</br>
-
+<br> Password: </br>
+<INPUT TYPE="text" NAME="password"
+<?php 
+			if (isset($_GET['alert'])){
+				echo 'placeholder = "Pass not match" ';	
+			} else {
+				echo 'placeholder = "Password" ';
+			}
+?>          > </br>
+<br> <INPUT TYPE="submit" VALUE="sign in" NAME="SubmitButton"></br>
+</form>
 
 </center>
 
 <div>
-
 <center>
 <p></p>
 Join ICheck, let's create an account
 
-
-<br>
-<INPUT TYPE="submit" VALUE="create account">
-</br>
+<br> <INPUT TYPE="submit" VALUE="create account"></br>
 
 <p></p>
 Did you forget your password?
 <INPUT TYPE="submit" VALUE="CLICK HERE">
-
-</center>
-
-</div>
-
-
+</center> </div>
 
 </body>
 </html>
